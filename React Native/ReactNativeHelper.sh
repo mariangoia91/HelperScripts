@@ -1,20 +1,16 @@
 COMMAND=$1
 FILENAME=$2
 
-if [ $COMMAND == "newscreen" ] 
-then
+if [ $COMMAND = "newscreen" ]; then
+echo "import React, { Component } from 'react';
+import { Text, View } from 'react-native';
 
-echo "import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
-
-const $FILENAME = function() {
-    return <View>
-    </View>
-};
-
-const styles = StyleSheet.create ({
-
-});
-
-export default $FILENAME;" > $FILENAME.js
+export default class $FILENAME extends Component {
+    render() {
+        return (
+            <View>
+            </View>
+        );
+    }
+}" > $FILENAME.js
 fi
