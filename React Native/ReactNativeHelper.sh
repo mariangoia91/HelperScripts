@@ -20,7 +20,8 @@ export default class $1 extends Component {
 }
 
 if [ $COMMAND = "newscreen" ]; then
-newScreen $NAME.JS
+newScreen $NAME
+echo "Created new screen"
 fi
 
 if [ $COMMAND = "init" ]; then
